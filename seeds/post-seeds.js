@@ -1,6 +1,6 @@
 const {Post} = require('../models')
 
-const PostData = [
+const postData = [
     {
         title: 'What is a 400 error?',
         post_entry: '400 is a bad request. The server cannot comprehend what the user is trying to get',
@@ -25,5 +25,9 @@ const PostData = [
         title: 'Is the console real?',
         post_entry: 'Yes',
         user_id: 5
-    },
+    }
 ]
+
+const seedPosts = () => Post.bulkCreate(postData);
+
+module.exports = seedPosts;
