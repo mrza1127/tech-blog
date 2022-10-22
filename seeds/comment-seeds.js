@@ -26,4 +26,8 @@ const commentData = [
         post_id: 1,
         user_id: 5
     }
-]
+];
+
+const seedComments = () => Comment.bulkCreate(commentData);
+
+module.exports = seedComments;
